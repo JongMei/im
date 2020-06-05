@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Talk from "./components/talk/talk.js";
+import Router from "./router/index";
 
-ReactDOM.render(<Talk />, document.getElementById("root"));
+ReactDOM.render(<Router />, document.getElementById("root"));
