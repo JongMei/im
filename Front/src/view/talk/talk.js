@@ -21,11 +21,11 @@ class Talk extends React.Component {
   }
 
   ioCommit = () => {
-    Socket.emit("chat message", this.state.inputValue);
+    Socket.emit("sendMsg", this.state.inputValue);
   };
 
   ioFun() {
-    Socket.on("chat message", (msg) => {
+    Socket.on("receiveMsg", (msg) => {
       console.log(msg);
       this.setState({
         inputValue: "",
