@@ -54,7 +54,6 @@ class Talk extends React.Component {
           <button onClick={this.ioCommit}>Send</button>
         </div>
 
-        <Link to="/list" className="friendListBtn">好友列表入口</Link>
       </div>
     );
   }

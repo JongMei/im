@@ -41,7 +41,7 @@ class friendList extends React.Component {
           <div className="scroll-box">
             {this.state.listArr.map((item, key) => {
               return (
-                <Link to="/" className="row" key={key}>
+                <Link to="/chatting" className="row" key={key}>
                   <img src={item.imgUrl} alt="" />
                   <span className="name">{item.name}</span>
                 </Link>

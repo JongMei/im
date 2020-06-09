@@ -47,14 +47,3 @@ body {
 #messages li:nth-child(odd) {
   background: #eee;
 }
-
-.friendListBtn {
-  line-height: .4rem;
-  position : fixed;
-  right: .2rem;
-  bottom: 1.6rem;
-  background: rgb(130, 224, 255);
-  color: #fff;
-  padding: .2rem .3rem;
-  border-radius: .1rem;
-}

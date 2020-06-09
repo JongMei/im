@@ -6,8 +6,8 @@ import List from "../view/friendList/friendList"
 const BasicRoute = () => (
   <HashRouter>
     <Switch>
-      <Route exact path="/" component={() => <Talk />} />
-      <Route exact path="/list" component={() => <List />} />
+      <Route exact path="/chatting" component={() => <Talk />} />
+      <Route exact path="/" component={() => <List />} />
     </Switch>
   </HashRouter>
 );
