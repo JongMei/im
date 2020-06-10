@@ -16,7 +16,7 @@ class BottomNav extends React.Component {
   render() {
     return (
       <div className="bottomNav">
-        <Link className="on" to="/list">
+        <Link className="on" to="/">
           通讯录
         </Link>
         <Link to="/login">我的</Link>

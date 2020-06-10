@@ -49,7 +49,7 @@ class friendList extends React.Component {
             })}
           </div>
         </div>
-        <BottomNav/>
+        {/* <BottomNav/> */}
       </div>
     );
   }

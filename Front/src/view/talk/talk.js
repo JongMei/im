@@ -42,7 +42,7 @@ class Talk extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="box">
         <NumberList id="messages" numbers={this.state.context} />
         <div className="form">
           <input
@@ -53,7 +53,6 @@ class Talk extends React.Component {
           />
           <button onClick={this.ioCommit}>Send</button>
         </div>
-
       </div>
     );
   }
