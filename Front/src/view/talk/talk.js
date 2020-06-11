@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import io from "socket.io-client";
 import "./talk.css";
 
@@ -43,7 +44,7 @@ class Talk extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="box">
         <NumberList id="messages" numbers={this.state.context} />
         <div className="form">
           <input
