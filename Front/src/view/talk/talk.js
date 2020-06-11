@@ -6,7 +6,9 @@ const Socket = io("http://localhost:3001");
 
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) => <li key={number}>{number}</li>);
+  const listItems = numbers.map((number, index) => (
+    <li key={index}>{number}</li>
+  ));
   return <ul>{listItems}</ul>;
 }
 
