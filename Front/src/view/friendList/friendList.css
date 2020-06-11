@@ -43,6 +43,15 @@ a {
   overflow-x: hidden;
 }
 
+.list .scroll-box .title {
+  width: 100%;
+  line-height: .6rem;
+  color: #fff;
+  background: #00bcd4;
+  box-sizing: border-box;
+  padding: 0 .2rem;
+}
+
 .list .row {
   width: 100%;
   line-height: 1rem;
