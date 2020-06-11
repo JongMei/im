@@ -45,7 +45,7 @@ module.exports = {
       "/api": {
         target: "http://localhost:3000",
         pathRewrite: {
-          "^/api": "/static/mock",
+          "^/api": "",
         },
         ws: true,
         changeOrigin: true, // 允许 ws跨域

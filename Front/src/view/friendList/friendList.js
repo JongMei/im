@@ -33,19 +33,8 @@ class friendList extends React.Component {
         { imgUrl: "assets/wangye.jpg", name: "！@#！#" },
       ],
     };
-    this.getList();
   }
 
-  getList() {
-    React.$axios
-      .get("/api/mock.json")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
 
   render() {
     return (
