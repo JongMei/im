@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import io from "socket.io-client";
 import "./talk.css";
 
@@ -7,8 +7,8 @@ const Socket = io("http://localhost:3001");
 
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) => <li key={number}>{number}</li>);
-  return <ul>{listItems}</ul>;
+  const listItems = numbers.map((number) => <li key={number}> {number} </li>);
+  return <ul> {listItems} </ul>;
 }
 
 class Talk extends React.Component {
@@ -37,22 +37,24 @@ class Talk extends React.Component {
   }
 
   handleChange = (event) => {
-    this.setState({ inputValue: event.target.value });
+    this.setState({
+      inputValue: event.target.value,
+    });
   };
 
   render() {
     return (
       <div className="box">
-        <NumberList id="messages" numbers={this.state.context} />
+        <NumberList id="messages" numbers={this.state.context} />{" "}
         <div className="form">
           <input
             autoComplete="off"
             id="m"
             value={this.state.inputValue}
             onChange={this.handleChange}
-          />
-          <button onClick={this.ioCommit}>Send</button>
-        </div>
+          />{" "}
+          <button onClick={this.ioCommit}> Send </button>{" "}
+        </div>{" "}
       </div>
     );
   }
