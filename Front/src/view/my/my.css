@@ -1,0 +1,18 @@
+.my{
+    padding-top: 1rem;
+    background: #c3c3c3;
+    height: 100vh;
+}
+.row{
+    width: 100vw;
+    background: #fff;
+    margin-bottom: 0.2rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.2rem;
+}
+.avtor{
+    width: 1rem;
+    height: 1rem;
+}

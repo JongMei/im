@@ -1,7 +1,10 @@
-import {Form,Input,Avatar,Button} from 'antd';
+import {Form, Input, Avatar, Button,Alert } from 'antd';
 import React from "react";
-import { InfoCircleOutlined, UserOutlined ,EyeInvisibleOutlined, EyeTwoTone} from '@ant-design/icons';
+import { withRouter } from "react-router-dom";
+import {InfoCircleOutlined, UserOutlined, EyeInvisibleOutlined, EyeTwoTone} from '@ant-design/icons';
+import {Link} from "react-router-dom";
 import './login.css'
+
 const layout = {
     labelCol: {
         span: 8,
@@ -16,13 +19,41 @@ const tailLayout = {
         span: 16,
     },
 };
+
 class Login extends React.Component {
     constructor(props) {
+        console.log(props,'onde')
         super(props)
-        this.state = {}
+        this.state = {
+            tips:''
+        }
     }
+
     onFinish = values => {
         console.log('Success:', values);
+        let postData ={
+            name:values.username,
+            password:values.password
+        }
+        fetch('//localhost:3001/api/signIn', {
+            // post提交
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(postData)//把提交的内容转字符串
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.code != 200){
+                this.setState({
+                    tips:data.message
+                })
+            }else{
+                //注册成功，跳转到好友列表
+                this.props.history.push('/List')
+            }
+        })
     };
 
     onFinishFailed = errorInfo => {
@@ -32,7 +63,7 @@ class Login extends React.Component {
     render() {
         return (
             <div className="main">
-                <div className="row"><Avatar size={64} icon={<UserOutlined />} /></div>
+                <div className="row"><Avatar size={64} icon={<UserOutlined/>}/></div>
                 <Form
                     {...layout}
                     name="basic"
@@ -67,17 +98,22 @@ class Login extends React.Component {
                     >
                         <Input.Password
                             placeholder="请填写密码，6-20个字符"
-                            iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                            iconRender={visible => (visible ? <EyeTwoTone/> : <EyeInvisibleOutlined/>)}
                         />
                     </Form.Item>
+                    {this.state.tips.length > 0 ?
+                        <Alert className="tips"  message={this.state.tips} type="error" showIcon />:''
+                    }
                     <Form.Item {...tailLayout}>
-                        <Button type="primary" htmlType="submit" shape="round" size='large'>
+                        <Button className="btn" type="primary" htmlType="submit" shape="round" size='large'>
                             登录
                         </Button>
                     </Form.Item>
+                    <Link to="/sign" className="singbtn">还没账号？点击去注册！</Link>
                 </Form>
             </div>
         )
     }
 }
-export default Login;
+
+export default withRouter(Login);

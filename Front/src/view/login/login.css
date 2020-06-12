@@ -7,6 +7,10 @@
     box-sizing: border-box;
     padding: 2rem 0.5rem;
     overflow: hidden;
+    z-index: 9;
+    background: #fff;
+    position: relative;
+    text-align: center;
 }
 .row{
     width: 6.3rem;
@@ -25,4 +29,20 @@ input{
 .site-form-item-icon svg,.ant-input-suffix svg{
     width: .3rem;
     height: .3rem;
+}
+.ant-btn-round.ant-btn-lg{
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+.ant-col-offset-8{
+    margin-left: 0;
+    text-align: center;
+}
+.singbtn{
+    display:block;
+    width: 100%;
+    margin-top: -.1rem;
+}
+.tips{
+    margin: 10px 0;
 }

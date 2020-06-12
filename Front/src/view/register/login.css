@@ -1,0 +1,37 @@
+@import '~antd/dist/antd.css';
+.main{
+    width: 100vw;
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2rem 0.5rem;
+    overflow: hidden;
+    z-index: 9;
+    background: #fff;
+    position: relative;
+}
+.row{
+    width: 6.3rem;
+    margin:.4rem auto;
+    text-align: center;
+}
+input{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+}
+.ant-input-affix-wrapper{
+    height: 100%;
+    position: relative;
+}
+.site-form-item-icon svg,.ant-input-suffix svg{
+    width: .3rem;
+    height: .3rem;
+}
+.ant-btn-round.ant-btn-lg{
+    padding: 6.4px 50px;
+}
+.ant-col-offset-8{
+    margin-left: 0;
+}

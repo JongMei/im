@@ -1,12 +1,14 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import io from "socket.io-client";
 import "./talk.css";
 
 const Socket = io("http://localhost:3001");
-
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map((number) => <li key={number}>{number}</li>);
+  const listItems = numbers.map((number, index) => (
+    <li key={index}>{number}</li>
+  ));
   return <ul>{listItems}</ul>;
 }
 
@@ -21,11 +23,11 @@ class Talk extends React.Component {
   }
 
   ioCommit = () => {
-    Socket.emit("chat message", this.state.inputValue);
+    Socket.emit("sendMsg", this.state.inputValue);
   };
 
   ioFun() {
-    Socket.on("chat message", (msg) => {
+    Socket.on("receiveMsg", (msg) => {
       console.log(msg);
       this.setState({
         inputValue: "",
@@ -41,7 +43,7 @@ class Talk extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="box">
         <NumberList id="messages" numbers={this.state.context} />
         <div className="form">
           <input
