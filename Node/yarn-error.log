@@ -1,0 +1,31 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_global\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  D:\Program Files\nodejs\node_global;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;D:\Program Files\nodejs\;C:\Program Files\TortoiseSVN\bin;C:\Users\Yzf\AppData\Local\Microsoft\WindowsApps;;C:\Users\Yzf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Yzf\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\phpstudy_pro\WWW\myGithub\im\Node\package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:310:30)
+      at D:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

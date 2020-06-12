@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <title>React App</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    (function (win, doc) {
+      if (!win.addEventListener) return;
+      var html = document.documentElement;
+
+      function setFont() {
+        var w = html.clientWidth,
+          h = html.clientHeight;
+        html.style.fontSize = w > h ? w / 1334 * 100 + "px" : w / 750 * 100 + "px";
+
+      }
+      doc.addEventListener('DOMContentLoaded', setFont, false);
+      win.addEventListener('resize', setFont, false);
+      win.addEventListener('load', setFont, false);
+    })(window, document);
+  </script>
+</body>
+
+</html>
