@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import io from "socket.io-client";
 import "./talk.css";
 
@@ -27,6 +28,7 @@ class Talk extends React.Component {
   };
 
   ioFun() {
+    console.log(this.props.location.query)
     Socket.on("receiveMsg", (msg) => {
       console.log(msg);
       this.setState({
@@ -59,4 +61,4 @@ class Talk extends React.Component {
   }
 }
 
-export default Talk;
+export default withRouter(Talk);
