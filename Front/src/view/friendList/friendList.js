@@ -35,8 +35,8 @@ class friendList extends React.Component {
     });
   };
 
-  toChatting = () => {
-    this.props.history.push({pathname: '/chatting', query: {fromId: 0, toId: 1}})
+  toChatting = (key) => {
+    this.props.history.push({pathname: '/chatting', query: {fromId: 0, toId: key}})
   }
 
   render() {
@@ -57,7 +57,7 @@ class friendList extends React.Component {
           <div className="scroll-box">
             {this.state.listArr.map((item, key) => {
               return (
-                <a onClick={this.toChatting.bind(this)} className="row" key={key}>
+                <a onClick={this.toChatting.bind(this, key)} className="row" key={key}>
                   <img src={item.imgUrl} alt="" />
                   <span className="name">{item.name}</span>
                 </a>
