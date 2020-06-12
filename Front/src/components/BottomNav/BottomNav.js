@@ -19,7 +19,7 @@ class BottomNav extends React.Component {
         <Link className="on" to="/">
           通讯录
         </Link>
-        <Link to="/login">我的</Link>
+        <Link to="/login">我的{this.props.testData}</Link>
       </div>
     );
   }

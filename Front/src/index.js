@@ -1,13 +1,19 @@
 import React from "react";
+import axios from './axios/index';
 import ReactDOM from "react-dom";
-import { HashRouter, Route, Link, Switch } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Router from "./router/index";
 import BottomNav from "./components/BottomNav/BottomNav";
 
+
+React.$axios = axios;
+
 ReactDOM.render(
-  <HashRouter>
-    <Router />
-    <BottomNav />
-  </HashRouter>,
+  (
+    <HashRouter>
+      <Router />
+      <BottomNav testData="1111" />
+    </HashRouter>
+  ),
   document.getElementById("root")
 );

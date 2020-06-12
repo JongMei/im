@@ -20,7 +20,7 @@ app.use(router.routes());
 
 // socket连接
 io.on('connection', (socket) => {
-    socket.on('receiveMsg', (msg) => {
+    socket.on('sendMsg', (msg) => {
         console.log('message: ' + msg);
         io.emit('receiveMsg', msg);
     });

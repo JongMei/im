@@ -18,14 +18,14 @@ a {
   display: flex;
 }
 
-.header .header-right a {
+.header .header-right span {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header .header-right a img {
+.header .header-right span img {
   width: 0.4rem;
   height: 0.4rem;
 }
@@ -42,6 +42,15 @@ a {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+/* .list .scroll-box .title {
+  width: 100%;
+  line-height: .6rem;
+  color: #fff;
+  background: #00bcd4;
+  box-sizing: border-box;
+  padding: 0 .2rem;
+} */
 
 .list .row {
   width: 100%;
@@ -73,4 +82,58 @@ a {
 
 .list .row:not(:last-child) .name {
   border-bottom: 0.02rem solid #e5e5e5;
+}
+
+
+.search {
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.search .mask {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: -1;
+}
+
+.search .input-wrap {
+  width: 100%;
+  height: 1rem;
+  background: #00bcd4;
+  padding: .2rem;
+  box-sizing: border-box;
+  z-index: 3;
+  display: flex;
+}
+
+.search .input-wrap input {
+  flex: 1;
+  height: 100%;
+  z-index: 3;
+  border: none;
+  outline: none;
+  border-radius: .04rem;
+  padding: 0 .1rem;
+  box-sizing: border-box;
+}
+
+.search .input-wrap .btn {
+  width: 1rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-left: 0.2rem;
+  font-size: .36rem;
 }
